@@ -24,3 +24,8 @@ services:
     EzSystems\EzRecommendationClient\Event\Subscriber\RecommendationRandomContentEventSubscriber:
         tags:
             - { name: kernel.event_subscriber, event: recommendation.response }
+
+    EzSystems\EzRecommendationClient\Event\Subscriber\UserAPIEventSubscriber:
+        tags:
+            - { name: kernel.event_subscriber, event: recommendation.update_user }
+            - { name: kernel.event_subscriber, event: recommendation.fetch_user }
